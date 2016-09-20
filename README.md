@@ -44,7 +44,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* `opening-newline` - prohibits insertion of newline after opening brace when function is called with less or `number` of arguments (1 by default)
+* `opening-newline` - prohibits insertion of newline after opening brace when function is called with `number` or less arguments (1 by default)
 
 ## License
 
