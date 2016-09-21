@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-func-call",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eslint plugin to control function call code style",
   "keywords": [
     "eslint",
@@ -8,16 +8,21 @@
     "eslintplugin",
     "eslint-plugin",
     "function",
+    "func",
+    "fn",
     "call",
+    "code",
     "style"
   ],
   "author": "Constantin Titarenko",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "istanbul cover _mocha -- tests && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
+    "coveralls": "^2.11.14",
     "eslint": "~2.6.0",
+    "istanbul": "^0.4.5",
     "mocha": "^2.4.5"
   },
   "engines": {

@@ -1,6 +1,6 @@
 "use strict";
 
-var rule = require('../../../lib').rules['opening-newline']
+var rule = require('../').rules['opening-newline']
 var RuleTester = require('eslint').RuleTester
 
 var ruleTester = new RuleTester()
