@@ -3,7 +3,6 @@
 Eslint plugin to control function call code style
 
 [![Build Status](https://travis-ci.org/titarenko/eslint-plugin-func-call.svg?branch=master)](https://travis-ci.org/titarenko/eslint-plugin-func-call)
-
 [![Coverage Status](https://coveralls.io/repos/github/titarenko/eslint-plugin-func-call/badge.svg?branch=master)](https://coveralls.io/github/titarenko/eslint-plugin-func-call?branch=master)
 
 ## Installation
