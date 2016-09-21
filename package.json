@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-func-call",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Eslint plugin to control function call code style",
   "keywords": [
     "eslint",

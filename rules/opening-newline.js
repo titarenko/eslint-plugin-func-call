@@ -8,7 +8,9 @@ module.exports = {
 			CallExpression: function (node) {
 				var curArgs = node.arguments.length
 				var minArgs = context.options[0] || 1
-				var referenceLine = node.loc.start.line
+				var referenceLine = node.callee.type == 'MemberExpression'
+					? node.callee.property.loc.start.line
+					: node.loc.start.line
 				var lineToCompare = curArgs > 0
 					? node.arguments[0].loc.start.line
 					: node.loc.end.line

@@ -9,7 +9,11 @@ ruleTester.run('opening-newline', rule, {
 		'call(\targ)',
 		'call(arg)',
 		'call(\n\targ1,\n\targ2)',
-		'call()'
+		'call()',
+		'call("\\\nasdasd\\\nasdasd\\\n")',
+		'obj\n\t.method()',
+		'obj\n\t.method(\na,\nb)',
+		'obj\n\t.method(\ta)'
 	],
 	invalid: [
 		{
@@ -21,6 +25,16 @@ ruleTester.run('opening-newline', rule, {
 			code: 'call(\n)',
 			options: [3],
 			errors: [ { message: 'Newline after opening brace is not allowed for function calls with 3 or less arguments!' } ]
+		},
+		{
+			code: 'obj.call(\n)',
+			options: [3],
+			errors: [ { message: 'Newline after opening brace is not allowed for function calls with 3 or less arguments!' } ]
+		},
+		{
+			code: 'obj.call(\na)',
+			options: [2],
+			errors: [ { message: 'Newline after opening brace is not allowed for function calls with 2 or less arguments!' } ]
 		}
 	]
 })
